@@ -1,0 +1,22 @@
+<table class="table table-hover">
+
+  <tr>
+    <th>Name</th>
+    <th>Price</th> 
+    <th>Quantity in stock</th>
+    <th></th> 
+  </tr>
+
+  <% warehouse.each do |stock| %>
+  
+  <tr>
+    <td><%=stock[:product].name %></td>
+    <td><%=stock[:product].price %></td>
+    <td><%= stock[:quantity] %></td>
+
+    <th><a href="/products/<%= stock[:product].id %>"><button type="button" class="btn btn-primary">Choose quantity</button>
+    </a></th>
+
+  <% end %> 
+
+</table>

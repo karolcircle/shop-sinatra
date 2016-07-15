@@ -1,0 +1,50 @@
+body {
+  background-color: black;
+  background: url('/background-min.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.page { 
+  background-color: white;
+  opacity: 0.9;
+  width: 80%;
+  padding: 30px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+
+.btn-group {
+  font-size: 12px;
+  margin: 20px;
+}
+
+
+ul.menu {
+  list-style-type: none;
+  margin: 30;
+  padding: 0;
+  overflow: hidden;
+  background-color: #5cb85c;
+}
+
+ul.menu li {
+  float: left;
+}
+
+ul.menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.menu li a:hover {
+  background-color: white;
+  color: black;
+}
