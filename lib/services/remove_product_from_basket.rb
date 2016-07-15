@@ -10,9 +10,7 @@ module Shop
 
     def call
       item = FetchBasketItem.new.call(product_id)
-
       return unless item
-
       reduce_item_quantity(item, quantity)
     end
 
@@ -20,11 +18,10 @@ module Shop
     def reduce_item_quantity(item, quantity)
       if item.quantity > quantity
         item.quantity -= quantity 
-      elsif
-        item.quantity == quantity
+      elsif item.quantity == quantity
         BASKET.delete(item)
       else
-        raise ArgumentError if quantity <= 0
+        raise MyError
       end      
     end    
   end

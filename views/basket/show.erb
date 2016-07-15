@@ -11,13 +11,13 @@
   <% basket.each do |b| %>
 
   <tr>
-   <td><%= b[:product].id %></td>
-   <td><%= b[:product].name %></td>
-   <td><%= b[:product].price %></td>
-   <td><%= b[:quantity] %></td>
-   <td><%= b[:total_price] %></td>
-   <td><%= b[:total_price_gross] %></td>
-   <td>
+    <td><%= b[:product].id %></td>
+    <td><%= b[:product].name %></td>
+    <td><%= b[:product].price %></td>
+    <td><%= b[:quantity] %></td>
+    <td><%= b[:total_price] %></td>
+    <td><%= b[:total_price_gross] %></td>
+    <td>
      <form action="/basket" method="post">
       <input type="hidden" name="product_id" value=<%= b[:product].id %>>
       <input type="hidden" name="_method" value="DELETE">
@@ -34,5 +34,4 @@
     <td> Gross sum </td>
     <td><%= gross_sum %></td>
   </tr>
-  
 </table>

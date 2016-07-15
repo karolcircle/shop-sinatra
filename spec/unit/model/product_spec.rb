@@ -1,9 +1,7 @@
 require_relative '../../../lib/model/product.rb'
 
 module Shop
-
   RSpec.describe Shop::Product do
-
     let(:price) { 12 }
     let(:name) { "Ball" }
     let(:quantity) { 1 }

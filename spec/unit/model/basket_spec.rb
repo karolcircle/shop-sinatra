@@ -2,9 +2,7 @@ require_relative "../../../lib/model/basket"
 require_relative "../../../lib/model/product"
 
 module Shop
-
   RSpec.describe Shop::Basket do
-
     let(:product_id) { 1 }
     let(:quantity) { 2 }
     let(:result) { quantity * price}

@@ -7,7 +7,6 @@ require_relative "../../../lib/services/add_product_to_basket"
 module Shop
   BASKET = []
   PRODUCTS = []
-
   RSpec.describe Shop::AddProductToBasket do
     let(:product) { Shop::Product.new("Ball", 12) }
     let(:price) { 12 }

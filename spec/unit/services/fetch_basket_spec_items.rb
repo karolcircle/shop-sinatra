@@ -7,7 +7,6 @@ require_relative "../../../lib/model/product"
 module Shop
   BASKET = []
   PRODUCTS = []
-
   RSpec.describe Shop::FetchBasket do
     let(:product) { Shop::Product.new("Ball", 12) }
     let(:price) { 12 }
@@ -15,13 +14,14 @@ module Shop
     let(:product_id) { 1 }
     let(:total_price) { price * quantity }
     let(:total_price_gross) { total_price * 1.23 } 
-    let(:result) { [
+    let(:result) do [
       product: product,
       quantity: quantity,
       product_id: product_id,
       total_price: total_price,
       total_price_gross: total_price_gross
-      ] }
+      ] 
+    end
 
     let(:add_product_to_basket) { Shop::Basket.new(product_id: product.id, quantity: quantity) }
 

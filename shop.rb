@@ -1,7 +1,7 @@
 require "bundler/setup"
 require "sinatra/base"
 
-Dir["./lib/**/*.rb"].each{|file| require file}
+Dir["./lib/**/*.rb"].each{ |file| require file }
 
 module Shop
   PRODUCTS = [
@@ -19,7 +19,6 @@ module Shop
   BASKET = []
 
   class App < Sinatra::Base
-
     configure :test do
       set :dump_errors, false
       set :method_override, true

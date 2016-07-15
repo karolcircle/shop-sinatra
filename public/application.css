@@ -48,3 +48,9 @@ ul.menu li a:hover {
   background-color: white;
   color: black;
 }
+
+.text-brand {
+  font-size: 26px;
+  color: grey;
+  letter-spacing: 8px;
+}

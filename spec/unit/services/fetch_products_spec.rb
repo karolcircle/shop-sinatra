@@ -3,7 +3,6 @@ require_relative "../../../lib/services/fetch_products"
 
 module Shop
   PRODUCTS = []
-
   RSpec.describe Shop::FetchProducts do
     let(:product1) { Shop::Product.new("Ball", 12) }
     let(:product2) { Shop::Product.new("Plane", 120) }
