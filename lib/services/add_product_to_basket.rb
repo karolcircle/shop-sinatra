@@ -8,10 +8,20 @@ module Shop
     end
 
     def call
-      BASKET << Basket.new(
-        product_id: product_id,
-        quantity: quantity
-        )
+      item = FetchBasketItem.new.call(product_id)
+
+      if item == nil
+        BASKET << Basket.new(
+          product_id: product_id,
+          quantity: quantity
+          )
+      else
+        increase_item_quantity(item, quantity)
+      end
+    end
+
+    def increase_item_quantity(item, quantity)
+      item.quantity += quantity
     end
   end
 end

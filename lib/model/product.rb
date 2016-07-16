@@ -7,7 +7,7 @@ module Shop
     def initialize(name, price)
       @id = set_id
       @name = name
-      @price = set_price(price)
+      @price = check_price(price)
     end
 
     private
@@ -15,7 +15,7 @@ module Shop
       @@id += 1
     end
 
-    def set_price(price)
+    def check_price(price)
       raise ArgumentError unless price.is_a?(Numeric)
       raise ArgumentError if price <= 0
       price

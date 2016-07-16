@@ -5,7 +5,6 @@ module Shop
       {
       product: item.fetch_product,
       product_id: item.product_id,
-      product_id: item.product_id,
       quantity: item.quantity,        
       }
       end
